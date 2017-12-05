@@ -1,4 +1,5 @@
 import shopify
+import settings
 
 #Simulated extracted order data
 def simulate_extract_orders():
@@ -9,9 +10,9 @@ def simulate_extract_orders():
 
 #Perform order extraction from Shopify store
 def extract_orders():
-    API_KEY = "98a3176db2ba05bc653fe8504dfa2d95"
-    PASSWORD = "0d74ee329c454ecd7bab7a6b2e52d137"
-    SHARED_SECRET = "ad435c5b588eee55483adecdaef94773"
+    API_KEY = settings.API_KEY
+    PASSWORD = settings.PASSWORD
+    SHARED_SECRET = settings.SHARED_SECRET
 
     shop_url = "https://%s:%s@market-fresh.myshopify.com/admin" % (API_KEY, PASSWORD)
     shopify.ShopifyResource.set_site(shop_url)
