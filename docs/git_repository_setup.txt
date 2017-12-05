@@ -15,6 +15,9 @@
 
 3. Cloning from master repository to host server
   git clone https://github.com/market-fresh/mf-shopify-fulfillment.git
+  pip3 install pandas
+  pip3 install --upgrade ShopifyAPI
+
 
 4. Updating host server
   git add *

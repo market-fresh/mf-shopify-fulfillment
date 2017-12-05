@@ -63,7 +63,7 @@ def main():
     route_map = list()
     for timing in timings:
         cur_df = df.loc[df['delivery_time'] == timing]
-        if(cur_df):
+        if cur_df:
             origin = {'lat': 1.2847359, 'lng': 103.8302216} #Tiong Bahru Wet Market
             destination = list()
             coordinates = list(zip(cur_df['latitude'], cur_df['longitude'], cur_df['order_number']))
