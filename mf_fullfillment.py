@@ -69,7 +69,7 @@ def main():
             coordinates = list(zip(cur_df['latitude'], cur_df['longitude'], cur_df['order_number']))
 
             for coordinate in coordinates:
-                    destination.append({'lat': coordinate[0], 'lng': coordinate[1], 'order': coordinate[2]})
+                destination.append({'lat': coordinate[0], 'lng': coordinate[1], 'order': coordinate[2]})
 
             result = generate_fulfillment_map(cur_df, origin, destination)
             if result:
