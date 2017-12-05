@@ -1,0 +1,26 @@
+
+
+1. Setting up local repository
+  git init
+  git add .
+  git commit -m “”
+  git remote add origin https://github.com/market-fresh/mf-shopify-fulfillment.git
+  git pull origin master
+  git push -u origin master
+
+2. Committing changes to master repository
+  git add .
+  git commit -m “”
+  git push -u origin master
+
+3. Cloning from master repository to host server
+  git clone https://github.com/market-fresh/mf-shopify-fulfillment.git
+
+4. Updating host server
+  git add *
+  git stash
+  git pull
+
+
+  Market-fresh
+  PansFish.2017
