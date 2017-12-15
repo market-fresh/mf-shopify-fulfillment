@@ -1,0 +1,8 @@
+numpy==1.13.3
+pandas==0.21.0
+pyactiveresource==2.1.2
+python-dateutil==2.6.1
+pytz==2017.3
+PyYAML==3.12
+ShopifyAPI==2.5.1
+six==1.11.0

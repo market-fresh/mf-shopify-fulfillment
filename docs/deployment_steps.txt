@@ -1,0 +1,68 @@
+A. Create AWS EC2
+1. Log in to AWS
+  AWS console:
+    mike@marketfresh.com.sg
+    PansFish.2017
+
+  AWS postgreSQL Prod:
+    fishmonger
+    fishmonger
+
+  AWS postgreSQL Test:
+    fishmonger-test
+    fishmonger-test
+
+2. EC2
+
+3. RDS
+
+
+=========================================================================================================
+B. Setting up web application in ubuntu:
+
+1. Get ssh key-value pair PEM file
+  chmod 400 /Users/mike/Projects/fishmonger/pansfish-fishmonger.pem
+
+2. Connect to AWS CLI
+  Prod:
+  ssh -i /Users/mike/Projects/fishmonger/pansfish-fishmonger.pem ubuntu@ec2-18-217-10-229.us-east-2.compute.amazonaws.com
+
+  Test:
+  ssh -i /Users/mike/Projects/fishmonger/fishmonger-test.pem ubuntu@ec2-18-217-92-150.us-east-2.compute.amazonaws.com
+
+3.Update and upgrade the repository
+  $ sudo apt-get update
+  $ sudo apt-get upgrade
+
+4.Install python and some basic packages
+  sudo apt-get install python3
+  sudo apt-get install python3-pip
+  sudo apt-get install python3-dev
+  sudo apt-get install build-essential
+
+5. Install virtualenvwrapper
+  pip3 install virtualenv virtualenvwrapper
+
+6. Add the below lines in ~/.bashrc
+  export WORKON_HOME=/home/ubuntu/.virtualenvs
+  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.5
+  source /home/ubuntu/.local/bin/virtualenvwrapper.sh
+
+7. Source .bashrc file
+  source ~/.bashrc
+
+8. Create virtualenvironment
+  mkvirtualenv mf-shopify-fulfillment
+  workon mf-shopify-fulfillment
+
+9. Synch from git repo
+  git clone https://github.com/market-fresh/mf-shopify-fulfillment.git
+
+10. Install application requirements
+  pip3 install --upgrade -r requirements.txt
+
+11. Configure settings.py
+
+12. Configure crontab
+  crontab -e
+  0 7 * * 2-7 python /home/ubuntu/mf-shopify-fulfillment/mf_fullfillment.py
