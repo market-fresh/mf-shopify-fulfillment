@@ -64,3 +64,11 @@ B. Setting up web application in ubuntu:
 12. Configure crontab
   crontab -e
   0 7 * * 2-7 python /home/ubuntu/mf-shopify-fulfillment/mf_fullfillment.py
+
+=========================================================================================================
+C. References
+
+https://ecommerce.shopify.com/c/shopify-apis-and-technology/t/help-with-python-code-for-shopify-363641
+https://help.shopify.com/api/reference/order
+
+https://www.cumulations.com/blogs/37/How-to-write-Cron-jobs-on-Amazon-Web-ServicesAWS-EC2-server
