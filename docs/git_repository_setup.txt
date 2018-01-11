@@ -25,5 +25,5 @@
   git pull
 
 
-  Market-fresh
+  market-fresh
   PansFish.2017
