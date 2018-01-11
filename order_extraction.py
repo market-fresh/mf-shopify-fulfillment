@@ -30,7 +30,9 @@ def extract_orders():
         delivery_day = order.note_attributes[0].attributes['value']
         delivery_time = order.note_attributes[1].attributes['value']
         shipping_address = order.shipping_address.attributes
-        address = shipping_address['address1'] + ' ' + shipping_address['address2']
+        address1 = shipping_address['address1'] if shipping_address['address1'] else ''
+        address2 = shipping_address['address2'] if shipping_address['address2'] else ''
+        address = address1 + ' ' + address2
         zip_code = shipping_address['zip']
         longitude = shipping_address['longitude']
         latitude = shipping_address['latitude']
